@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+
+
+ 
+  back:
+      build: ./backend
+      command: python manage.py runserver 0.0.0.0:8000
+      stdin_open: true
+      tty: true
+      volumes:
+        - ./backend:/app
+      ports:
+        - "8000:8000"
+      expose:
+        - "8000"
+  
+  front:
+    stdin_open: true
+    build: ./test
+    volumes:
+      - ./test:/app
+      - /app/node_modules
+    ports:
+      - "4200:4200"
+    expose:
+      - "4200"
+
+    depends_on:
+      - back
