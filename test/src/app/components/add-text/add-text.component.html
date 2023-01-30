@@ -1,0 +1,10 @@
+    <form [formGroup]="textForm" (ngSubmit)="onSubmit()" class="example-form">
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput type="text" id="value" class="form-control"
+      formControlName="value" required placeholder="Add text..."></textarea>
+    </mat-form-field>
+  
+    <button mat-button [mat-dialog-close]>Close</button>
+    <button mat-button type="submit" [disabled]="!textForm.valid" cdkFocusInitial>Ok</button>
+  </form>

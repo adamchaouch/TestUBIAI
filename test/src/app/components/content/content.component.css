@@ -1,0 +1,10 @@
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+.card-footer {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 5px;
+}

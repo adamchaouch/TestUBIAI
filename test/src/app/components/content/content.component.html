@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-content >
+        <div appHighlightSelection >
+           {{text}}
+          </div>
+    </mat-card-content>
+    <mat-card-footer class="card-footer">	
+    <div class="example-button-row" >
+        <button mat-button color="primary"(click)='sendData()'  [disabled]="!text">Send</button>
+     </div>
+      </mat-card-footer>
+  </mat-card>
